@@ -1,0 +1,65 @@
+body {
+    background-color: beige;
+  }
+  
+  h1 {
+    color: black;
+    text-align: center;
+  }
+  
+  p {
+    text-align:center;
+    color: black;
+    font-family: arial;
+    font-size: 20px;
+  }
+
+  table, td {
+    color: black;
+    border: 1px solid;
+    font-size: 19px;
+  }
+
+  table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+
+  button:hover {
+    background-color:lightgreen;
+    transition: 0.5s;
+}
+
+  button {
+    background-color:lightblue;
+    color: black;
+    text-align: center;
+  }
+
+  #container {
+    text-align: center;
+  }
+
+  li {
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .center {
+    text-align: center;
+    list-style-position: inside;
+  }
+
+  div.form
+{
+    display: block;
+    text-align: center;
+}
+
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
