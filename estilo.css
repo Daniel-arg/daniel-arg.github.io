@@ -17,8 +17,9 @@ body {
 
   table, td {
     color: black;
-    border: 1px solid;
+    border: 7px solid;
     font-size: 19px;
+    font-family: "Lucida Console", "Courier New", monospace;
   }
 
   table.center {
