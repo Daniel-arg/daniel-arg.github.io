@@ -1,22 +1,36 @@
 <DOCTYPE html>
     <html lang="en">
       <head>
+        
         <link rel="stylesheet" href="estilo.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
      </head>
 
-     <body>
-      <h1> UFC aficionados</h1>
-        <p> Esta página contiene algunos datos y videos para los que somos aficionados los eventos de MMA de la UFC. </p> 
-        
+      <body>
 
-         <div class="container"> <!--inicio de container-->
-            <div class="row">  <!--inicio de row-->
-              <div class="col-sm"> <!--inicio de col 1-->
+        <!--Alerta de proxima pelea-->
+        <script>
+          alert("Mañana 4 de marzo se disputa el título de los pesos pesados: Jon Jones vs Cyril Gane");
+        </script>
 
-                <div class="p-3 mb-2 bg-light text-white">
+        <h1 id="Titulo"> UFC aficionados</h1>
 
-                <p> <br>Actuales Campeones </p> 
+        <script> // cambio color de titulo usando js 
+          let titulo = document.getElementById('Titulo');
+          titulo.style.color = "#CD7F32";
+        </script>
+
+          <p> Esta página contiene algunos datos y videos para los que somos aficionados los eventos de MMA de la UFC. </p> 
+
+        <div class="container"> <!--inicio de container general-->
+
+          <div class="row">  <!--inicio de row-->
+            <div class="col-sm"> <!--inicio de col 1-->
+
+                <div class="p-3 mb-2 bg-light text-white"> <!--inicio de color-->
+
+                  <p> <br>Actuales Campeones </p> 
+                  
                   <div> <!--inicio div tabla-->
                     <table class="table table-sm">
                       <thead>
@@ -25,6 +39,7 @@
                           <th scope="col">Campeón/campeona</th>
                         </tr>
                       </thead>
+
                         <tr>
                           <td>Strawweight mujeres</td>
                           <td>Zhang Weili</td>
@@ -72,104 +87,158 @@
                             <td>Heavyweight</td>
                             <td>Vacant</td>
                           </tr>
-                      </table>
-              </div> 
-              </div> <!-- fin de color-->
-              
-              
+                    </table> <!--fin tabla-->
+
+                  </div> <!--fin div de tabla-->
+                </div> <!-- fin de color-->
+        
             
-            <p> <br> Lugares con más eventos de UFC realizados: </p> 
+                  <p tag="text"> <br> Lugares con más eventos de UFC realizados: </p> 
 
-            <div class="p-3 mb-2 bg-info text-dark"> <!--inicio color lugares de eventos-->
+                  <div class="p-3 mb-2 bg-info text-dark"> <!--inicio color lugares de eventos-->
 
-            <ol class="center">
-            <li>UFC Apex</li>
-            <li>MGM Grand Garden Arena</li>
-            <li>Mandalay Events Center</li>
-            <li>T-mobile Arena</li>
-            <li>Palms Casino Resort</li>
-            </ol>
+                    <ol class="center">
+                    <li>UFC Apex</li>
+                    <li>MGM Grand Garden Arena</li>
+                    <li>Mandalay Events Center</li>
+                    <li>T-mobile Arena</li>
+                    <li>Palms Casino Resort</li>
+                    </ol>
 
-            </div> <!--fin color lugares de eventos-->
+                  </div> <!--fin color lugares de eventos-->
 
-            <p> <br>Algunos de los mejores peleadores de la historia </p> 
+                  <p tag="text"> <br>Algunos de los mejores peleadores de la historia </p> 
 
-            <div class="p-3 mb-2 bg-info text-dark"> <!--inicio color mejores peleadores-->
+                  <div class="p-3 mb-2 bg-info text-dark"> <!--inicio color mejores peleadores-->
 
-            <ul class="center">
-            <li>Jon Jones</li>
-            <li>Demetrious Johnson</li>
-            <li>Anderson Silva</li>
-            <li>Georges St-Pierre</li>
-            <li>Stipe Miocic</li>
-            <li>Jose Aldo</li>
-            </ul>
+                    <ul id="lista_desordenada" class="center">
+                    <li id="cambio">Jon Jones</li>
+                    <li>Demetrious Johnson</li>
+                    <li>Anderson Silva</li>
+                    <li>Georges St-Pierre</li>
+                    <li>Stipe Miocic</li>
+                    <li>Jose Aldo</li>
+                    </ul>
 
-          </div> <!--fin color mejores peleadors-->
+                    <p id=>La cantidad de peleadores en la lisa anterior (obtenido con childNodes) es:</p>
+                    <p id="texto_bajo_ul"></p>
+                    
+                      <script>
+                        let lista_desordenada = document.getElementById("lista_desordenada");
+                        let texto_bajo_ul = document.getElementById("texto_bajo_ul");
+
+                        const lista_peleadores = document.querySelector("ul");
+
+                        const li = document.createElement('li');
+                        li.textContent = 'Fedor Emelianenko';
+
+                        const li2 = document.createElement('li');
+                        li2.textContent = 'Fedor Emelianenko';
+
+                        lista_peleadores.appendChild(li);
+                        lista_peleadores.appendChild(li2);
+                
+                        let hijos = lista_desordenada.childNodes;
+                        texto_bajo_ul.innerText = hijos.length - 7;
+
+                        lista_peleadores.removeChild(lista_peleadores.lastChild);
+
+                      </script>
+
+
+                   </div> <!--fin color mejores peleadors-->
 
             </div> <!--fin de col 1-->
 
-
+      
 
             <div class="col-sm"> <!--inicio de col 2-->
 
               <div class="p-3 mb-2 bg-warning text-dark"><!--inicio de color columna-->
-              
-              <p>
-                Estos son algunos links realcionados
-                <!--<li><a href="http://127.0.0.1:5500/">Menu</a></li> -->
-                <li><a href="https://www.ufc.com/">Ufc sitio oficial</a></li>
-                <li><a href="https://www.espn.com/mma/">ESPN mma</a></li>
-                <li><a href="secundaria.html">Más contenido</a></li>
+                
+                <p tag="text"> Estos son algunos links realcionados
+                  <!--<li><a href="http://127.0.0.1:5500/">Menu</a></li> -->
+                  <li><a href="https://www.ufc.com/">Ufc sitio oficial</a></li>
+                  <li><a href="https://www.espn.com/mma/">ESPN mma</a></li>
+                  <li><a href="secundaria.html">Más contenido</a></li>
 
-                <br>   
+                  <br>   
 
-                <div id="container">
-                  <button type="button" onclick="location.href='https://www.ufc.com/tickets'">
-                  Comprar entradas </button>
-                </div>
-                <br>
+                  <div id="container">
+                    <button type="button" onclick="location.href='https://www.ufc.com/tickets'">
+                    Comprar entradas </button>
+                  </div>
+
+                  <br>
 
                   <div class="form">
                     <form action="https://www.espn.com/search/_/q/ " method="get"> 
-        
+          
                       <label for="tema" >Selecciona un peleador a buscar en ESPN:</label>
                         <select name="q" id="q"> 
-              
-                        <option value="Conor McGregor">Conor McGregor</option>
-                        <option value="Jon Jones">Jon Jones</option>
-                        <option value="Ciryl Gane">Ciryl Gane</option>
-                        <option value="Marlon Vera">Marlon Vera</option>
-                        <option value="Valentina Shevchenko">Valentina Shevchenko</option>
-                        <option value="Petr Yan">Petr Yan</option>
-                        <option value="Alexander Volkanovski">Alexander Volkanovski</option>
-                      
+                
+                          <option value="Conor McGregor">Conor McGregor</option>
+                          <option value="Jon Jones">Jon Jones</option>
+                          <option value="Ciryl Gane">Ciryl Gane</option>
+                          <option value="Marlon Vera">Marlon Vera</option>
+                          <option value="Valentina Shevchenko">Valentina Shevchenko</option>
+                          <option value="Petr Yan">Petr Yan</option>
+                          <option value="Alexander Volkanovski">Alexander Volkanovski</option>
+                        
                         </select>
-              
-                      <input type="submit" value="Enviar">
+                
+                        <input type="submit" value="Enviar">
                     </form>
+                  </div>
+              
+                </p>
+
+
+      
+                <div style="text-align: center;">
+
+                  <p> <br> Algunos momentos increíbles de grandes peleadores: </p> 
+                    <iframe id="video_1" width="350" height="300" src="https://www.youtube.com/embed/Dlw9PfxFGuQ">
+                     </iframe>
+
+                    <script>
+                      var boton = document.getElementById("b1");
+                      boton.onclick = function()
+                      {
+                        var colorBoton = document.getElementById("contenedor").getAttribute("style");
+                        alert(colorBoton);
+                      }
+                    </script>
+
+                    <div id="contenedor" style="color:azure">
+                      <button id="b1" type="button">Get attribute (color del contenedor)</button>
                     </div>
-            
-              </p>
 
 
-    
-                    <div style="text-align: center;">
+                     <iframe id="video_2" width="30" height="300" src="https://www.youtube.com/embed/Pm8op4Dn9mo">
+                     </iframe> 
 
-                      <p> <br> Algunos momentos increíbles de grandes peleadores: </p> 
-                          <iframe width="350" height="300" src="https://www.youtube.com/embed/Dlw9PfxFGuQ">
-                          </iframe>
-                          <iframe width="350" height="300" src="https://www.youtube.com/embed/Pm8op4Dn9mo">
-                          </iframe>
-                          
-                          <img src="https://cdn.vox-cdn.com/thumbor/zeAFbjDS9x_sFg0w-ineYnyvuHo=/480x0/cdn.vox-cdn.com/uploads/chorus_asset/file/19553472/20160305_0276_Conor_McGregor_vs_Nate_Diaz.jpg" width="350" height="250">
-                     </div>
-                  
-                     </div>
+                     <script>
+                      video_2.setAttribute("width","350")
+                    </script>
+
+                      <img src="https://cdn.vox-cdn.com/thumbor/zeAFbjDS9x_sFg0w-ineYnyvuHo=/480x0/cdn.vox-cdn.com/uploads/chorus_asset/file/19553472/20160305_0276_Conor_McGregor_vs_Nate_Diaz.jpg" width="350" height="250">
+                </div>
+                    
+                </div> <!--fin de color de columna-->
 
             </div> <!-- fin de col 2-->
+
           </div> <!--fin de row-->
-        </div> <!-- fin de container-->
+
+        </div> <!-- fin de container general-->
+
+        <script>
+          let textos = document.getElementsByTagName('p');
+          for(i=0; i < textos.length; i++){
+            textos[i].style.color = "#00008B";
+          }
+        </script>
       
 
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-
